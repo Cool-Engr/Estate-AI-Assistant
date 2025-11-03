@@ -1,4 +1,4 @@
-# [💬 AI Real Estate Assistant App](https://ai-real-estate-assistant.streamlit.app/)
+# [💬 Estate AI Assistant App](https://ai-real-estate-assistant.streamlit.app/)
 
 ## Overview
 The AI Real Estate Assistant is a conversational AI application designed to help real estate agencies assist potential buyers and renters in finding their ideal properties. The application uses natural language processing and machine learning to understand user preferences and recommend suitable properties from a database.
@@ -290,8 +290,8 @@ This table describes the columns in the DataFrame:
 
 #### 1. Clone the repository
 ```sh
-git clone https://github.com/AleksNeStu/ai-real-estate-assistant.git
-cd ai-real-estate-assistant
+git clone https://github.com/Cool-Engr/Estate-AI-Assistant.git
+cd Estate-AI-Assistant
 ```
 
 #### 2. Set up Poetry environment

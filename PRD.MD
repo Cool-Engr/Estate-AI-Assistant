@@ -1,7 +1,7 @@
-# **Product Requirements Document: AI Real Estate Assistant**
+# **Product Requirements Document: Estate AI Assistant**
 
 ## Overview
-The AI Real Estate Assistant is a conversational AI application designed to help real estate agencies assist potential buyers and renters in finding their ideal properties. The application uses natural language processing and machine learning to understand user preferences and recommend suitable properties from a database.
+The Estate AI Assistant is a conversational AI application designed to help real estate agencies assist potential buyers and renters in finding their ideal properties. The application uses natural language processing and machine learning to understand user preferences and recommend suitable properties from a database.
 
 ## Problem Statement
 Real estate agents often spend significant time manually matching clients with properties. This process can be inefficient and may not always consider all available options. Additionally, clients may not always be able to articulate all their preferences at once, requiring multiple interactions.
