@@ -48,9 +48,9 @@ class RealEstateGPT:
             ChatOpenAI(temperature=0, model="gpt-3.5-turbo"),
             df,
             verbose=True,
-            # agent_type=AgentType.OPENAI_FUNCTIONS,
-            # allow_dangerous_code=True,
-            # prefix=self.system_msg
+            agent_type=AgentType.OPENAI_FUNCTIONS,
+            allow_dangerous_code=True,
+            prefix=self.system_msg
         )
         self.conversation_history = []
 
