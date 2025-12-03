@@ -50,11 +50,11 @@ class DataLoaderCsv:
         print(f"Data frame loaded from {self.csv_path}, rows: {len(df)}")
         return df
 
-    def load_format_df(self, df: pd.DataFrame):
-        """Returns the DataFrame. If not loaded, loads and prepares the data first."""
-        df_formatted = self.format_df(df)
-        print(f"Data frame formatted from {self.csv_path}")
-        return df_formatted
+    # def load_format_df(self, df: pd.DataFrame):
+    #     """Returns the DataFrame. If not loaded, loads and prepares the data first."""
+    #     df_formatted = self.format_df(df)
+    #     print(f"Data frame formatted from {self.csv_path}")
+    #     return df_formatted
 
     @staticmethod
     def bathrooms_fake(rooms: float):
