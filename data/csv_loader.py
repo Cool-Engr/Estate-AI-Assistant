@@ -56,12 +56,12 @@ class DataLoaderCsv:
         print(f"Data frame formatted from {self.csv_path}")
         return df_formatted
 
-    @staticmethod
-    def bathrooms_fake(rooms: float):
-        # Add 'bathrooms': Either 1 or 2, check consistency with 'rooms' (e.g., bathrooms should be realistic)
-        if pd.isna(rooms) or rooms < 2:
-            return 1.0
-        return np.random.choice([1.0, 2.0])
+    # @staticmethod
+    # def bathrooms_fake(rooms: float):
+    #     # Add 'bathrooms': Either 1 or 2, check consistency with 'rooms' (e.g., bathrooms should be realistic)
+    #     if pd.isna(rooms) or rooms < 2:
+    #         return 1.0
+    #     return np.random.choice([1.0, 2.0])
 
     @staticmethod
     def price_media_fake(price: float):
