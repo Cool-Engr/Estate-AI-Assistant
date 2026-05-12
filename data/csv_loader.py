@@ -69,13 +69,13 @@ class DataLoaderCsv:
         # Generate a fake price for utilities, up to 20% of the 'price'
         return round(np.random.uniform(0, 0.2 * price), 2)
 
-    # @staticmethod
-    # def camel_to_snake(name):
-    #     """
-    #     Convert camelCase to snake_case.
-    #     """
-    #     s1 = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', name)
-    #     return re.sub('([a-z0-9])([A-Z])', r'\1_\2', s1).lower()
+    @staticmethod
+    def camel_to_snake(name):
+        """
+        Convert camelCase to snake_case.
+        """
+        s1 = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', name)
+        return re.sub('([a-z0-9])([A-Z])', r'\1_\2', s1).lower()
 
     @staticmethod
     def format_df(df: pd.DataFrame, rows_count=2000):
