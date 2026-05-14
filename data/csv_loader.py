@@ -33,17 +33,17 @@ class DataLoaderCsv:
 
         self.csv_path = csv_path
 
-    @staticmethod
-    def url_exists(url: URL):
-        parsed_url = urlparse(str(url))
-        is_valid_url = all([parsed_url.scheme, parsed_url.netloc])
-        if not is_valid_url:
-            return False  # URL structure is not valid
-        try:
-            response = requests.head(url, allow_redirects=True)
-            return response.status_code < 400
-        except requests.RequestException:
-            return False  # Handle any exceptions during the request
+    # @staticmethod
+    # def url_exists(url: URL):
+    #     parsed_url = urlparse(str(url))
+    #     is_valid_url = all([parsed_url.scheme, parsed_url.netloc])
+    #     if not is_valid_url:
+    #         return False  # URL structure is not valid
+    #     try:
+    #         response = requests.head(url, allow_redirects=True)
+    #         return response.status_code < 400
+    #     except requests.RequestException:
+    #         return False  # Handle any exceptions during the request
 
     def load_df(self):
         df = pd.read_csv(str(self.csv_path))
