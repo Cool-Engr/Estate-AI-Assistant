@@ -6,53 +6,53 @@ from langchain.agents.agent_types import AgentType
 from langchain_experimental.agents import create_pandas_dataframe_agent
 from langchain_openai import ChatOpenAI
 
-class RealEstateGPT:
-    """
-    A specialized AI agent for real estate assistance that uses LangChain's
-    pandas dataframe agent to process and respond to real estate queries.
+# class RealEstateGPT:
+#     """
+#     A specialized AI agent for real estate assistance that uses LangChain's
+#     pandas dataframe agent to process and respond to real estate queries.
     
-    This class encapsulates the functionality for creating a conversational
-    AI assistant that can analyze real estate data and provide relevant
-    property recommendations and insights.
-    """
+#     This class encapsulates the functionality for creating a conversational
+#     AI assistant that can analyze real estate data and provide relevant
+#     property recommendations and insights.
+#     """
 
-    def __init__(self, df: pd.DataFrame | Sequence[pd.DataFrame], key: str):
-        """
-        Initialize the RealEstateGPT agent.
+#     def __init__(self, df: pd.DataFrame | Sequence[pd.DataFrame], key: str):
+#         """
+#         Initialize the RealEstateGPT agent.
         
-        This method sets up the LangChain agent with the provided dataframe(s) and
-        configures the conversational context with system and user message templates.
-        It creates a pandas dataframe agent that can execute Python code to answer
-        questions about the real estate data.
+#         This method sets up the LangChain agent with the provided dataframe(s) and
+#         configures the conversational context with system and user message templates.
+#         It creates a pandas dataframe agent that can execute Python code to answer
+#         questions about the real estate data.
         
-        Parameters:
-            df (pd.DataFrame | Sequence[pd.DataFrame]): The property dataset(s) to analyze.
-                Can be a single DataFrame or a sequence of DataFrames.
-            key (str): OpenAI API key for authentication.
-        """
-        # Define system and user prompts for context
-        self.system_msg = (
-            "System: You are a specialized real estate assistant. Your role is to help users find the perfect home, "
-            "provide real estate advice, and offer insights into property market trends. You should focus on the "
-            "following aspects: assisting users in understanding property details, highlighting key features, and "
-            "advising on price negotiations based on the 'Possibly to negotiate' column. Ensure all responses are "
-            "relevant to real estate and property management. Do not respond to questions outside the real estate domain."
-        )
-        self.user_msg = "User: {query}"  # Format for user queries
-        self.assistant_msg = "Assistant: Please keep responses relevant to real estate only."
+#         Parameters:
+#             df (pd.DataFrame | Sequence[pd.DataFrame]): The property dataset(s) to analyze.
+#                 Can be a single DataFrame or a sequence of DataFrames.
+#             key (str): OpenAI API key for authentication.
+#         """
+#         # Define system and user prompts for context
+#         self.system_msg = (
+#             "System: You are a specialized real estate assistant. Your role is to help users find the perfect home, "
+#             "provide real estate advice, and offer insights into property market trends. You should focus on the "
+#             "following aspects: assisting users in understanding property details, highlighting key features, and "
+#             "advising on price negotiations based on the 'Possibly to negotiate' column. Ensure all responses are "
+#             "relevant to real estate and property management. Do not respond to questions outside the real estate domain."
+#         )
+#         self.user_msg = "User: {query}"  # Format for user queries
+#         self.assistant_msg = "Assistant: Please keep responses relevant to real estate only."
 
-        os.environ["OPENAI_API_KEY"] = key
+#         os.environ["OPENAI_API_KEY"] = key
 
-        # Initialize the agent
-        self.agent = create_pandas_dataframe_agent(
-            ChatOpenAI(temperature=0, model="gpt-3.5-turbo"),
-            df,
-            verbose=True,
-            agent_type=AgentType.OPENAI_FUNCTIONS,
-            allow_dangerous_code=True,
-            prefix=self.system_msg
-        )
-        self.conversation_history = []
+#         # Initialize the agent
+#         self.agent = create_pandas_dataframe_agent(
+#             ChatOpenAI(temperature=0, model="gpt-3.5-turbo"),
+#             df,
+#             verbose=True,
+#             agent_type=AgentType.OPENAI_FUNCTIONS,
+#             allow_dangerous_code=True,
+#             prefix=self.system_msg
+#         )
+#         self.conversation_history = []
 
     def ask_qn(self, query):
         """
