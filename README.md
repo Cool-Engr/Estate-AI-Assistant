@@ -9,7 +9,7 @@ For detailed project requirements and specifications, see the [Product Requireme
 
 ### Technical Solution Overview
 
-The AI Real Estate Assistant implements a Retrieval-Augmented Generation system that combines the strengths of large language models with structured property data to provide intelligent property recommendations through natural conversation.
+The AI Real Estate Assistant implements a Retrieval-Augmented Generation (RAG) system that combines the strengths of large language models with structured property data to provide intelligent property recommendations through natural conversation.
 
 | Component | Implementation | Why We Chose It |
 |-----------|----------------|-----------------|
