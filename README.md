@@ -13,7 +13,7 @@ The AI Real Estate Assistant implements a Retrieval-Augmented Generation (RAG) s
 
 | Component | Implementation | Why We Chose It |
 |-----------|----------------|-----------------|
-| Large Language Models | OpenAI GPT / DeepSeek | Provides natural language understanding and human-like responses with reasoning capabilities |
+| Large Language Models | OpenAI GPT / llama | Provides natural language understanding and human-like responses with reasoning capabilities |
 | Data Processing | Pandas | Industry-standard for handling tabular data with powerful querying and transformation features |
 | Vector Embeddings | FastEmbed | Efficient, lightweight embedding generation for semantic search capabilities |
 | Vector Storage | DocArrayInMemorySearch, ChromaDB | In-memory solution for quick retrieval in demonstration environments |
