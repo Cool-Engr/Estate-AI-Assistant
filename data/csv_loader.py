@@ -25,11 +25,11 @@ class DataLoaderCsv:
             # raise FileNotFoundError(err_msg)
             st.warning(err_msg, icon='⚠')
             csv_path = None
-        # elif isinstance(csv_path, URL) and not self.url_exists(csv_path):
-        #     err_msg = f"The URL at {csv_path} does not exist."
-        #     # raise FileNotFoundError(err_msg)
-        #     st.warning(err_msg, icon='⚠')
-        #     csv_path = None
+        elif isinstance(csv_path, URL) and not self.url_exists(csv_path):
+            err_msg = f"The URL at {csv_path} does not exist."
+            # raise FileNotFoundError(err_msg)
+            st.warning(err_msg, icon='⚠')
+            csv_path = None
 
         self.csv_path = csv_path
 
@@ -45,10 +45,10 @@ class DataLoaderCsv:
         except requests.RequestException:
             return False  # Handle any exceptions during the request
 
-    def load_df(self):
-        df = pd.read_csv(str(self.csv_path))
-        print(f"Data frame loaded from {self.csv_path}, rows: {len(df)}")
-        return df
+    # def load_df(self):
+    #     df = pd.read_csv(str(self.csv_path))
+    #     print(f"Data frame loaded from {self.csv_path}, rows: {len(df)}")
+    #     return df
 
     def load_format_df(self, df: pd.DataFrame):
         """Returns the DataFrame. If not loaded, loads and prepares the data first."""
