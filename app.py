@@ -381,9 +381,9 @@ with ((col1)):
                     process_query(text, use_test_data)
                     
                     # Clear test message after first iteration and increment counter
-                    if st.session_state['iteration'] == 0:
-                        st.session_state['test_msg'] = ''
-                    st.session_state['iteration'] += 1
+                    # if st.session_state['iteration'] == 0:
+                    #     st.session_state['test_msg'] = ''
+                    # st.session_state['iteration'] += 1
 
 # Right column: Conversation History
 with col2:
