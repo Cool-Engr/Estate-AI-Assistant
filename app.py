@@ -43,8 +43,8 @@ _MSG3 = 'Looks like you provided me property for Bialystok, but I need for Krako
 # Currently only using the first message, others are commented out
 MSG_MAP = {
     0: _MSG1,
-    # 1: _MSG2,
-    # 2: _MSG3
+    1: _MSG2,
+    2: _MSG3
 }
 
 def load_csv_data(url: str, format_data=False):
